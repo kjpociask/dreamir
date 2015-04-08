@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-content">
+        <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.image }}" /></a>
+        {{ post.content }}
+        <center>
+          <small><a href="{{ post.url | prepend: site.baseurl }}">permalink</a></small>
+        </center>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+  </header>
+
+  <article class="post-content">
+    <a href="{{page.image}}"><img src="{{ page.image }}" /></a>
+    {{ content }}
+  </article>
+  <small>
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}">previous</a> 
+    {% if page.next %}
+      <span style="color: #aaa">&amp;</span>
+    {% endif %}
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}">next</a></small>
+  {% endif %}
+
+</div>
